@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #2a2c33; -webkit-text-stroke: #2a2c33; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #db3f39; -webkit-text-stroke: #db3f39; background-color: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #42933e; -webkit-text-stroke: #42933e; background-color: #ffffff}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #2a2c33; -webkit-text-stroke: #2a2c33; background-color: #ffffff; min-height: 16.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8f9096; -webkit-text-stroke: #8f9096; background-color: #ffffff}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #325eee; -webkit-text-stroke: #325eee; background-color: #ffffff}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 30.0px Tahoma; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Tahoma; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Tahoma; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Tahoma; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #db3f39; -webkit-text-stroke: 0px #db3f39}
+    span.s3 {font-kerning: none; color: #a75705; -webkit-text-stroke: 0px #a75705}
+    span.s4 {font-kerning: none; color: #42933e; -webkit-text-stroke: 0px #42933e}
+    span.s5 {font-kerning: none; color: #2a2c33; -webkit-text-stroke: 0px #2a2c33}
+    span.s6 {font-kerning: none; color: #325eee; -webkit-text-stroke: 0px #325eee}
+    span.s7 {font-kerning: none; color: #930093; -webkit-text-stroke: 0px #930093}
+    span.s8 {font: 14.0px Menlo; font-kerning: none; color: #2a2c33; background-color: #ffffff; -webkit-text-stroke: 0px #2a2c33}
+    span.s9 {font: 14.0px Menlo; font-kerning: none; color: #db3f39; background-color: #ffffff; -webkit-text-stroke: 0px #db3f39}
+    span.s10 {font-kerning: none; background-color: rgba(255, 255, 255, 0.95); text-shadow: 2.0px 2.0px 4.0px rgba(255, 255, 255, 0)}
+    span.s11 {font-kerning: none; background-color: rgba(255, 255, 255, 0.2)}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;</span><span class="s2">html </span><span class="s3">lang</span><span class="s1">="</span><span class="s4">en</span><span class="s1">"&gt;</span></p>
+<p class="p2"><span class="s5">&lt;</span><span class="s1">head</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">meta </span><span class="s3">charset</span><span class="s1">="</span><span class="s4">UTF-8</span><span class="s1">"&gt;</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">meta </span><span class="s3">name</span><span class="s5">="</span><span class="s1">viewport</span><span class="s5">"</span><span class="s2"> </span><span class="s3">content</span><span class="s5">="</span><span class="s1">width=device-width, initial-scale=1.0</span><span class="s5">"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">title</span><span class="s1">&gt;PR Crisis Simulator&lt;/</span><span class="s2">title</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">style</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">*</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-sizing</span><span class="s1">: border-box;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">body</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family</span><span class="s1">: </span><span class="s4">'Segoe UI'</span><span class="s1">, Tahoma, Geneva, Verdana, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">135</span><span class="s1">deg, #667eea </span><span class="s3">0</span><span class="s1">%, #764ba2 </span><span class="s3">100</span><span class="s1">%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">min-height</span><span class="s1">: </span><span class="s3">100</span><span class="s1">vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">display</span><span class="s1">: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">align-items</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">justify-content</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.game-container</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">max-width</span><span class="s1">: </span><span class="s3">800</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width</span><span class="s1">: </span><span class="s3">100</span><span class="s1">%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">255</span><span class="s1">, </span><span class="s3">255</span><span class="s1">, </span><span class="s3">255</span><span class="s1">, </span><span class="s3">0.95</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow</span><span class="s1">: </span><span class="s3">0</span><span class="s1"> </span><span class="s3">20</span><span class="s1">px </span><span class="s3">40</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0.1</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">overflow</span><span class="s1">: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">backdrop-filter</span><span class="s1">: </span><span class="s6">blur</span><span class="s1">(</span><span class="s3">10</span><span class="s1">px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.header</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">45</span><span class="s1">deg, #ff6b6b, #ee5a24);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">text-align</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.header h1</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">2.5</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-bottom</span><span class="s1">: </span><span class="s3">10</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">text-shadow</span><span class="s1">: </span><span class="s3">2</span><span class="s1">px </span><span class="s3">2</span><span class="s1">px </span><span class="s3">4</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0.3</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.score-board</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">255</span><span class="s1">, </span><span class="s3">255</span><span class="s1">, </span><span class="s3">255</span><span class="s1">, </span><span class="s3">0.2</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">10</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-top</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">display</span><span class="s1">: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">justify-content</span><span class="s1">: space-around;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">flex-wrap</span><span class="s1">: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.score-item</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">text-align</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">5</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.score-value</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.5</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">display</span><span class="s1">: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.content</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">40</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.situation-card</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-bottom</span><span class="s1">: </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow</span><span class="s1">: </span><span class="s3">0</span><span class="s1"> </span><span class="s3">10</span><span class="s1">px </span><span class="s3">25</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0.1</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left</span><span class="s1">: </span><span class="s3">5</span><span class="s1">px solid #ff6b6b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.situation-text</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.3</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: </span><span class="s3">600</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: #2c3e50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-bottom</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">line-height</span><span class="s1">: </span><span class="s3">1.5</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.image-placeholder</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">width</span><span class="s1">: </span><span class="s3">100</span><span class="s1">%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">height</span><span class="s1">: </span><span class="s3">200</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">45</span><span class="s1">deg, #f1c40f, #e67e22);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">10</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">display</span><span class="s1">: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">align-items</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">justify-content</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.2</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">text-shadow</span><span class="s1">: </span><span class="s3">1</span><span class="s1">px </span><span class="s3">1</span><span class="s1">px </span><span class="s3">2</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0.3</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.threshold-info</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: #e8f4fd;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">8</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left</span><span class="s1">: </span><span class="s3">4</span><span class="s1">px solid #3498db;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.options-container</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">display</span><span class="s1">: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">gap</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-top</span><span class="s1">: </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.option-btn</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">45</span><span class="s1">deg, #74b9ff, #0984e3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border</span><span class="s1">: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">12</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.1</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: </span><span class="s3">600</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition</span><span class="s1">: all </span><span class="s3">0.3</span><span class="s1">s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow</span><span class="s1">: </span><span class="s3">0</span><span class="s1"> </span><span class="s3">5</span><span class="s1">px </span><span class="s3">15</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">116</span><span class="s1">, </span><span class="s3">185</span><span class="s1">, </span><span class="s3">255</span><span class="s1">, </span><span class="s3">0.3</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.option-btn:hover</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform</span><span class="s1">: </span><span class="s6">translateY</span><span class="s1">(</span><span class="s3">-2</span><span class="s1">px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow</span><span class="s1">: </span><span class="s3">0</span><span class="s1"> </span><span class="s3">8</span><span class="s1">px </span><span class="s3">25</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">116</span><span class="s1">, </span><span class="s3">185</span><span class="s1">, </span><span class="s3">255</span><span class="s1">, </span><span class="s3">0.4</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.option-btn:active</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform</span><span class="s1">: </span><span class="s6">translateY</span><span class="s1">(</span><span class="s3">0</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.result-card</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: #f8f9fa;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">12</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">25</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left</span><span class="s1">: </span><span class="s3">5</span><span class="s1">px solid #27ae60;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.result-text</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.2</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-bottom</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.points-display</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.5</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: #27ae60;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">10</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.continue-btn</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">45</span><span class="s1">deg, #00b894, #00a085);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border</span><span class="s1">: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">25</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.1</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: </span><span class="s3">600</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition</span><span class="s1">: all </span><span class="s3">0.3</span><span class="s1">s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-top</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.continue-btn:hover</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform</span><span class="s1">: </span><span class="s6">translateY</span><span class="s1">(</span><span class="s3">-2</span><span class="s1">px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow</span><span class="s1">: </span><span class="s3">0</span><span class="s1"> </span><span class="s3">5</span><span class="s1">px </span><span class="s3">15</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">0</span><span class="s1">, </span><span class="s3">184</span><span class="s1">, </span><span class="s3">148</span><span class="s1">, </span><span class="s3">0.3</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.start-btn</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">45</span><span class="s1">deg, #a29bfe, #6c5ce7);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border</span><span class="s1">: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px </span><span class="s3">40</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.3</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transition</span><span class="s1">: all </span><span class="s3">0.3</span><span class="s1">s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">display</span><span class="s1">: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">30</span><span class="s1">px auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.start-btn:hover</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">transform</span><span class="s1">: </span><span class="s6">scale</span><span class="s1">(</span><span class="s3">1.05</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow</span><span class="s1">: </span><span class="s3">0</span><span class="s1"> </span><span class="s3">10</span><span class="s1">px </span><span class="s3">25</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">108</span><span class="s1">, </span><span class="s3">92</span><span class="s1">, </span><span class="s3">231</span><span class="s1">, </span><span class="s3">0.3</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.warning</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: #fff3cd;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: #856404;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">8</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left</span><span class="s1">: </span><span class="s3">4</span><span class="s1">px solid #ffc107;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.final-result</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">text-align</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">40</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.final-score</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">3</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-weight</span><span class="s1">: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: #ff6b6b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">text-shadow</span><span class="s1">: </span><span class="s3">2</span><span class="s1">px </span><span class="s3">2</span><span class="s1">px </span><span class="s3">4</span><span class="s1">px </span><span class="s6">rgba</span><span class="s1">(</span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0</span><span class="s1">, </span><span class="s3">0.1</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">.grade</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.5</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">15</span><span class="s1">px </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-radius</span><span class="s1">: </span><span class="s3">25</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">display</span><span class="s1">: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.grade.amazing</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">45</span><span class="s1">deg, #00b894, #00a085);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.grade.good</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background</span><span class="s1">: </span><span class="s6">linear-gradient</span><span class="s1">(</span><span class="s3">45</span><span class="s1">deg, #fdcb6e, #e84393);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.intro-content</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">text-align</span><span class="s1">: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">40</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1">.intro-text</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">1.3</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color</span><span class="s1">: #2c3e50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">margin-bottom</span><span class="s1">: </span><span class="s3">30</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">line-height</span><span class="s1">: </span><span class="s3">1.6</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">@media </span><span class="s1">(</span><span class="s2">max-width</span><span class="s1">:</span><span class="s3"> 768px</span><span class="s1">) {</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">.game-container</span><span class="s5"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">margin</span><span class="s1">: </span><span class="s3">10</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s4">.header h1</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">font-size</span><span class="s1">: </span><span class="s3">2</span><span class="s1">em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s4">.content</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">padding</span><span class="s1">: </span><span class="s3">20</span><span class="s1">px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s4">.score-board</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">flex-direction</span><span class="s1">: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s2">style</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s5">&lt;/</span><span class="s1">head</span><span class="s5">&gt;</span></p>
+<p class="p2"><span class="s5">&lt;</span><span class="s1">body</span><span class="s5">&gt;</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s5">="</span><span class="s1">game-container</span><span class="s5">"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">header</span><span class="s1">"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s2">h1</span><span class="s1">&gt;🎮 PR Crisis Simulator&lt;/</span><span class="s2">h1</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">score-board</span><span class="s1">"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">score-item</span><span class="s1">"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s2">span </span><span class="s3">class</span><span class="s1">="</span><span class="s4">score-value</span><span class="s1">"</span><span class="s2"> </span><span class="s3">id</span><span class="s1">="</span><span class="s4">current-score</span><span class="s1">"&gt;0.0&lt;/</span><span class="s2">span</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s2">span</span><span class="s1">&gt;Current Score&lt;/</span><span class="s2">span</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">score-item</span><span class="s1">"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s2">span </span><span class="s3">class</span><span class="s1">="</span><span class="s4">score-value</span><span class="s1">"</span><span class="s2"> </span><span class="s3">id</span><span class="s1">="</span><span class="s4">total-choices</span><span class="s1">"&gt;0&lt;/</span><span class="s2">span</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s2">span</span><span class="s1">&gt;Total Choices&lt;/</span><span class="s2">span</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s1">="</span><span class="s4">score-item</span><span class="s1">"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s2">span </span><span class="s3">class</span><span class="s1">="</span><span class="s4">score-value</span><span class="s1">"</span><span class="s2"> </span><span class="s3">id</span><span class="s1">="</span><span class="s4">current-situation</span><span class="s1">"&gt;-&lt;/</span><span class="s2">span</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s2">span</span><span class="s1">&gt;Situation&lt;/</span><span class="s2">span</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">        </span>&lt;</span><span class="s2">div </span><span class="s3">class</span><span class="s5">="</span><span class="s1">content</span><span class="s5">"</span><span class="s2"> </span><span class="s3">id</span><span class="s5">="</span><span class="s1">game-content</span><span class="s5">"&gt;</span></p>
+<p class="p5"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1"><i>&lt;!-- Game content will be dynamically inserted here --&gt;</i><i></i></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s2">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">script</span><span class="s1">&gt;</span></p>
+<p class="p5"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// Game state</i><i></i></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">let</span><span class="s1"> currentSituation </span><span class="s6">=</span><span class="s1"> </span><span class="s3">1</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">let</span><span class="s1"> totalScore </span><span class="s6">=</span><span class="s1"> </span><span class="s3">0.0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">let</span><span class="s1"> totalChoices </span><span class="s6">=</span><span class="s1"> </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// Score values</i><i></i></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">const</span><span class="s1"> optionScores </span><span class="s6">=</span><span class="s1"> {</span><span class="s3">1</span><span class="s6">:</span><span class="s1"> </span><span class="s3">5.0</span><span class="s1">, </span><span class="s3">2</span><span class="s6">:</span><span class="s1"> </span><span class="s3">2.5</span><span class="s1">, </span><span class="s3">3</span><span class="s6">:</span><span class="s1"> </span><span class="s6">-</span><span class="s3">2.5</span><span class="s1">};</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// Situations and options</i><i></i></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">const</span><span class="s1"> situations </span><span class="s6">=</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">1</span><span class="s6">:</span><span class="s1"> {</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">text</span><span class="s6">:</span><span class="s5"> </span><span class="s1">"📍 Situation 1: A tweet from a former employee goes viral, accusing the company of unethical practices."</span><span class="s5">,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">image</span><span class="s6">:</span><span class="s1"> </span><span class="s4">"A.png"</span><span class="s1">,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">options</span><span class="s6">:</span><span class="s1"> {</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">1</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Issue a public statement"</span><span class="s5">, </span><span class="s1">"A1.png"</span><span class="s5">],</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">2</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Privately reach out to the accuser"</span><span class="s5">, </span><span class="s1">"A2.png"</span><span class="s5">],</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">3</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Remain silent for now"</span><span class="s5">, </span><span class="s1">"A3.png"</span><span class="s5">]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">threshold</span><span class="s6">:</span><span class="s1"> </span><span class="s3">5.0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">2</span><span class="s6">:</span><span class="s1"> {</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">text</span><span class="s6">:</span><span class="s5"> </span><span class="s1">"📍 Situation 2: A major news outlet is planning to release an article on the controversy."</span><span class="s5">,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">image</span><span class="s6">:</span><span class="s1"> </span><span class="s4">"B.png"</span><span class="s1">,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">options</span><span class="s6">:</span><span class="s1"> {</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">1</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Give an exclusive interview"</span><span class="s5">, </span><span class="s1">"B1.png"</span><span class="s5">],</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">2</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Send a prepared press release"</span><span class="s5">, </span><span class="s1">"B2.png"</span><span class="s5">],</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">3</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Deny all allegations"</span><span class="s5">, </span><span class="s1">"B3.png"</span><span class="s5">]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">threshold</span><span class="s6">:</span><span class="s1"> </span><span class="s3">10.0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">3</span><span class="s6">:</span><span class="s1"> {</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">text</span><span class="s6">:</span><span class="s5"> </span><span class="s1">"📍 Situation 3: Customers start demanding answers on social media."</span><span class="s5">,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">image</span><span class="s6">:</span><span class="s1"> </span><span class="s4">"C.png"</span><span class="s1">,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">options</span><span class="s6">:</span><span class="s1"> {</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">1</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Hold a press conference"</span><span class="s5">, </span><span class="s1">"C1.png"</span><span class="s5">],</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">2</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Do a live Q&amp;A on Instagram"</span><span class="s5">, </span><span class="s1">"C2.png"</span><span class="s5">],</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                    </span></span><span class="s3">3</span><span class="s6">:</span><span class="s5"> [</span><span class="s1">"Send internal communication only"</span><span class="s5">, </span><span class="s1">"C3.png"</span><span class="s5">]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">threshold</span><span class="s6">:</span><span class="s1"> </span><span class="s3">15.0</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s7">function</span><span class="s5"> </span><span class="s1">updateScoreBoard</span><span class="s5">() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">document</span><span class="s1">.</span><span class="s6">getElementById</span><span class="s1">(</span><span class="s4">'current-score'</span><span class="s1">).textContent </span><span class="s6">=</span><span class="s1"> totalScore.</span><span class="s6">toFixed</span><span class="s1">(</span><span class="s3">1</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">document</span><span class="s1">.</span><span class="s6">getElementById</span><span class="s1">(</span><span class="s4">'total-choices'</span><span class="s1">).textContent </span><span class="s6">=</span><span class="s1"> totalChoices;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">document</span><span class="s1">.</span><span class="s6">getElementById</span><span class="s1">(</span><span class="s4">'current-situation'</span><span class="s1">).textContent </span><span class="s6">=</span><span class="s1"> currentSituation </span><span class="s6">&lt;=</span><span class="s1"> </span><span class="s3">3</span><span class="s1"> </span><span class="s6">?</span><span class="s1"> currentSituation </span><span class="s6">:</span><span class="s1"> </span><span class="s4">'Complete'</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">function</span><span class="s1"> </span><span class="s6">showIntro</span><span class="s1">() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> content </span><span class="s6">=</span><span class="s1"> </span><span class="s6">document</span><span class="s1">.</span><span class="s6">getElementById</span><span class="s1">(</span><span class="s4">'game-content'</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>content.innerHTML </span><span class="s6">=</span><span class="s1"> `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="intro-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="intro.png" alt="Game Introduction" style="width: 100%; max-width: 400px; border-radius: 10px; margin-bottom: 20px;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p class="intro-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>Navigate through challenging PR situations and make strategic decisions.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>Each choice affects your score and determines if you can progress to the next crisis.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>Can you handle the pressure and maintain your company's reputation?</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="start-btn" onclick="displaySituation(1)"&gt;▶️ Start Game&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>`;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">updateScoreBoard</span><span class="s5">();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">function</span><span class="s1"> </span><span class="s6">displaySituation</span><span class="s1">(sitNum) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentSituation </span><span class="s6">=</span><span class="s1"> sitNum;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> situation </span><span class="s6">=</span><span class="s1"> situations[sitNum];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> content </span><span class="s6">=</span><span class="s1"> </span><span class="s6">document</span><span class="s1">.</span><span class="s6">getElementById</span><span class="s1">(</span><span class="s4">'game-content'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">let</span><span class="s1"> optionsHtml </span><span class="s6">=</span><span class="s1"> </span><span class="s4">''</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">for</span><span class="s1"> (</span><span class="s7">let</span><span class="s1"> optNum </span><span class="s7">in</span><span class="s1"> situation.options) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">const</span><span class="s1"> [label, _] </span><span class="s6">=</span><span class="s1"> situation.options[optNum];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>optionsHtml </span><span class="s6">+=</span><span class="s1"> `</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="option-btn" onclick="evaluateChoice(</span><span class="s5">${sitNum}</span><span class="s1">, </span><span class="s5">${optNum}</span><span class="s1">)"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s5">${optNum}</span><span class="s1">. </span><span class="s5">${label}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>content.innerHTML </span><span class="s6">=</span><span class="s1"> `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="situation-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="situation-text"&gt;${situation.text}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="${situation.image}" alt="Situation ${sitNum}" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; margin: 20px 0;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="threshold-info"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>🎯 &lt;strong&gt;Threshold Required:&lt;/strong&gt; ${situation.threshold} points to continue</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="options-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>${optionsHtml}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">updateScoreBoard</span><span class="s5">();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">function</span><span class="s1"> </span><span class="s6">evaluateChoice</span><span class="s1">(sitNum, optNum) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> situation </span><span class="s6">=</span><span class="s1"> situations[sitNum];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> [label, img] </span><span class="s6">=</span><span class="s1"> situation.options[optNum];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> points </span><span class="s6">=</span><span class="s1"> optionScores[optNum];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>totalScore </span><span class="s6">+=</span><span class="s1"> points;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>totalChoices </span><span class="s6">+=</span><span class="s1"> </span><span class="s3">1</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> content </span><span class="s6">=</span><span class="s1"> </span><span class="s6">document</span><span class="s1">.</span><span class="s6">getElementById</span><span class="s1">(</span><span class="s4">'game-content'</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">let</span><span class="s1"> resultHtml </span><span class="s6">=</span><span class="s1"> `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="situation-card"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="situation-text"&gt;</span><span class="s5">${situation.text}</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="result-card"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="result-text"&gt;✅ You chose: &lt;strong&gt;</span><span class="s5">${label}</span><span class="s1">&lt;/strong&gt;&lt;/div&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="</span><span class="s5">${img}</span><span class="s1">" alt="Choice Result" style="width: 100%; max-height: 250px; object-fit: cover; border-radius: 10px; margin: 15px 0;"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="points-display"&gt;🧮 Points: </span><span class="s5">${points &gt; 0 ? '+' : ''}${points.toFixed(1)}</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="points-display"&gt;📊 Total Score: </span><span class="s5">${totalScore.toFixed(1)}</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">`;</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">if</span><span class="s1"> (totalScore </span><span class="s6">&gt;=</span><span class="s1"> situation.threshold) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">if</span><span class="s1"> (sitNum </span><span class="s6">&lt;</span><span class="s1"> </span><span class="s3">3</span><span class="s1">) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>resultHtml </span><span class="s6">+=</span><span class="s1"> `</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button class="continue-btn" onclick="displaySituation(</span><span class="s5">${sitNum + 1}</span><span class="s1">)"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                            </span>➡️ Continue to Situation </span><span class="s5">${sitNum + 1}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s7">else</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>resultHtml </span><span class="s6">+=</span><span class="s1"> `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button class="continue-btn" onclick="showFinalResult()"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>🎉 See Final Results</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s7">else</span><span class="s1"> {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>resultHtml </span><span class="s6">+=</span><span class="s1"> `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="warning"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                        </span>⚠️ Not enough points to continue. You need </span><span class="s5">${situation.threshold}</span><span class="s1"> points total. Choose another option to improve your score.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p5"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s1"><i>// Show options again</i><i></i></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">                </span>resultHtml </span><span class="s6">+=</span><span class="s5"> `</span><span class="s1">&lt;/div&gt;&lt;div class="options-container"&gt;</span><span class="s5">`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">for</span><span class="s1"> (</span><span class="s7">let</span><span class="s1"> optNum </span><span class="s7">in</span><span class="s1"> situation.options) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s7">const</span><span class="s1"> [label, _] </span><span class="s6">=</span><span class="s1"> situation.options[optNum];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>resultHtml </span><span class="s6">+=</span><span class="s1"> `</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button class="option-btn" onclick="evaluateChoice(</span><span class="s5">${sitNum}</span><span class="s1">, </span><span class="s5">${optNum}</span><span class="s1">)"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s5">${optNum}</span><span class="s1">. </span><span class="s5">${label}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>resultHtml </span><span class="s6">+=</span><span class="s1"> `</span><span class="s4">&lt;/div&gt;</span><span class="s1">`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">if</span><span class="s1"> (totalScore </span><span class="s6">&gt;=</span><span class="s1"> situation.threshold </span><span class="s6">||</span><span class="s1"> sitNum </span><span class="s6">===</span><span class="s1"> </span><span class="s3">3</span><span class="s1">) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>resultHtml </span><span class="s6">+=</span><span class="s1"> `</span><span class="s4">&lt;/div&gt;</span><span class="s1">`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>content.innerHTML </span><span class="s6">=</span><span class="s1"> resultHtml;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">updateScoreBoard</span><span class="s5">();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s7">function</span><span class="s5"> </span><span class="s1">showFinalResult</span><span class="s5">() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> content </span><span class="s6">=</span><span class="s1"> </span><span class="s6">document</span><span class="s1">.</span><span class="s6">getElementById</span><span class="s1">(</span><span class="s4">'game-content'</span><span class="s1">);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> grade </span><span class="s6">=</span><span class="s1"> totalChoices </span><span class="s6">&lt;=</span><span class="s1"> </span><span class="s3">3</span><span class="s1"> </span><span class="s6">?</span><span class="s1"> </span><span class="s4">'amazing'</span><span class="s1"> </span><span class="s6">:</span><span class="s1"> </span><span class="s4">'good'</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">const</span><span class="s1"> gradeText </span><span class="s6">=</span><span class="s1"> totalChoices </span><span class="s6">&lt;=</span><span class="s1"> </span><span class="s3">3</span><span class="s1"> </span><span class="s6">?</span><span class="s1"> </span><span class="s4">'🏅 Amazing!'</span><span class="s1"> </span><span class="s6">:</span><span class="s1"> </span><span class="s4">'👍 Keep it up!'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>content.innerHTML </span><span class="s6">=</span><span class="s1"> `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="final-result"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="conclusion.png" alt="Game Conclusion" style="width: 100%; max-width: 400px; border-radius: 10px; margin-bottom: 20px;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;Game Complete!&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="final-score"&gt;${totalScore.toFixed(1)}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Total Choices Made:&lt;/strong&gt; ${totalChoices}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="grade ${grade}"&gt;${gradeText}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p style="margin-top: 20px; color: #666; line-height: 1.6;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>${totalChoices &lt;= 3 ?<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>'Excellent work! You handled the crisis efficiently with minimal decisions.' :<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>'Good job navigating the crisis! Consider how fewer, more strategic choices might improve efficiency.'}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="start-btn" onclick="restartGame()" style="margin-top: 30px;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>🔄 Play Again</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>`;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">            </span></span><span class="s1">updateScoreBoard</span><span class="s5">();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">function</span><span class="s1"> </span><span class="s6">restartGame</span><span class="s1">() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentSituation </span><span class="s6">=</span><span class="s1"> </span><span class="s3">1</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>totalScore </span><span class="s6">=</span><span class="s1"> </span><span class="s3">0.0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>totalChoices </span><span class="s6">=</span><span class="s1"> </span><span class="s3">0</span><span class="s1">;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">showIntro</span><span class="s1">();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s5"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// Initialize the game</i><i></i></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">showIntro</span><span class="s1">();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s2">script</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s5">&lt;/</span><span class="s1">body</span><span class="s5">&gt;</span></p>
+<p class="p7"><span class="s8">&lt;/</span><span class="s9">html</span><span class="s8">&gt;</span><span class="s10"><b>PR Crisis Simulator</b><b></b></span></p>
+<p class="p8"><span class="s11"><b>0.0</b><b></b></span></p>
+<p class="p9"><span class="s11">Current Score</span></p>
+<p class="p8"><span class="s11"><b>0</b><b></b></span></p>
+<p class="p9"><span class="s11">Total Choices</span></p>
+<p class="p8"><span class="s11"><b>-</b><b></b></span></p>
+<p class="p9"><span class="s11">Situation</span></p>
+<p class="p10"><span class="s1"></span><br></p>
+</body>
+</html>
