@@ -394,7 +394,7 @@
         });
 
         // Score values
-        const optionScores = {1: 5.0, 2: 2.5, 3: -2.5};
+        const optionScores = {1: 5.0, 2: 2.5, 3: 0};
 
         // Situations and options
         const situations = {
@@ -412,9 +412,9 @@
                 text: "📍 Situation 2: A major news outlet is planning to release an article on the controversy.",
                 image: "B.png",
                 options: {
-                    3: ["Give an exclusive interview", "B1.png"],
-                    1: ["Send a prepared press release", "B2.png"],
-                    2: ["Deny all allegations", "B3.png"]
+                    1: ["Give an exclusive interview", "B1.png"],
+                    3: ["Deny all allegations", "B3.png"],
+                    2: ["Send a prepared press release", "B2.png"]
                 },
                 threshold: 10.0
             },
@@ -422,9 +422,9 @@
                 text: "📍 Situation 3: Customers start demanding answers on social media.",
                 image: "C.png",
                 options: {
-                    2: ["Hold a press conference", "C1.png"],
-                    3: ["Do a live Q&A on Instagram", "C2.png"],
-                    1: ["Send internal communication only", "C3.png"]
+                    3: ["Send internal communication only", "C3.png"],
+                    1: ["Hold a press conference", "C1.png"],
+                    2: ["Do a live Q&A on Instagram", "C2.png"]
                 },
                 threshold: 15.0
             }
