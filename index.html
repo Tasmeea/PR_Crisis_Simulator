@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR Crisis Simulator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .game-container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .score-board {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .score-item {
+            text-align: center;
+            margin: 5px;
+        }
+
+        .score-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .situation-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .situation-text {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .game-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .game-image:hover {
+            transform: scale(1.02);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #f1c40f, #e67e22);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Modal styles for fullscreen image viewing */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 95%;
+            max-height: 95%;
+            border-radius: 10px;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .close:hover {
+            color: #ff6b6b;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: translate(-50%, -50%) scale(0.8); }
+            to { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        .threshold-info {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .options-container {
+            display: grid;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .option-btn {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(116, 185, 255, 0.3);
+        }
+
+        .option-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(116, 185, 255, 0.4);
+        }
+
+        .option-btn:active {
+            transform: translateY(0);
+        }
+
+        .result-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #27ae60;
+        }
+
+        .result-text {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .points-display {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #27ae60;
+            margin: 10px 0;
+        }
+
+        .continue-btn {
+            background: linear-gradient(45deg, #00b894, #00a085);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .continue-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+        }
+
+        .start-btn {
+            background: linear-gradient(45deg, #a29bfe, #6c5ce7);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .start-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+        }
+
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .final-result {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .final-score {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .grade {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .grade.amazing {
+            background: linear-gradient(45deg, #00b894, #00a085);
+            color: white;
+        }
+
+        .grade.good {
+            background: linear-gradient(45deg, #fdcb6e, #e84393);
+            color: white;
+        }
+
+        .intro-content {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .intro-text {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .game-container {
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .score-board {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🎮 PR Crisis Simulator</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="score-value" id="current-score">0.0</span>
+                    <span>Current Score</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-value" id="total-choices">0</span>
+                    <span>Total Choices</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-value" id="current-situation">-</span>
+                    <span>Situation</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content" id="game-content">
+            <!-- Game content will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Modal for fullscreen image viewing -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Game state
+        let currentSituation = 1;
+        let totalScore = 0.0;
+        let totalChoices = 0;
+
+        // Modal functions
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Score values
+        const optionScores = {1: 5.0, 2: 2.5, 3: -2.5};
+
+        // Situations and options
+        const situations = {
+            1: {
+                text: "📍 Situation 1: A tweet from a former employee goes viral, accusing the company of unethical practices.",
+                image: "A.png",
+                options: {
+                    1: ["Issue a public statement", "A1.png"],
+                    2: ["Privately reach out to the accuser", "A2.png"],
+                    3: ["Remain silent for now", "A3.png"]
+                },
+                threshold: 5.0
+            },
+            2: {
+                text: "📍 Situation 2: A major news outlet is planning to release an article on the controversy.",
+                image: "B.png",
+                options: {
+                    3: ["Give an exclusive interview", "B1.png"],
+                    1: ["Send a prepared press release", "B2.png"],
+                    2: ["Deny all allegations", "B3.png"]
+                },
+                threshold: 10.0
+            },
+            3: {
+                text: "📍 Situation 3: Customers start demanding answers on social media.",
+                image: "C.png",
+                options: {
+                    2: ["Hold a press conference", "C1.png"],
+                    3: ["Do a live Q&A on Instagram", "C2.png"],
+                    1: ["Send internal communication only", "C3.png"]
+                },
+                threshold: 15.0
+            }
+        };
+
+        function updateScoreBoard() {
+            document.getElementById('current-score').textContent = totalScore.toFixed(1);
+            document.getElementById('total-choices').textContent = totalChoices;
+            document.getElementById('current-situation').textContent = currentSituation <= 3 ? currentSituation : 'Complete';
+        }
+
+        function showIntro() {
+            const content = document.getElementById('game-content');
+            content.innerHTML = `
+                <div class="intro-content">
+                    <img src="intro.png" alt="Game Introduction" class="game-image" onclick="openModal('intro.png')">
+                    <p class="intro-text">
+                        Navigate through challenging PR situations and make strategic decisions. 
+                        Each choice affects your score and determines if you can progress to the next crisis.
+                        Can you handle the pressure and maintain your company's reputation?
+                    </p>
+                    <button class="start-btn" onclick="displaySituation(1)">▶️ Start Game</button>
+                </div>
+            `;
+            updateScoreBoard();
+        }
+
+        function displaySituation(sitNum) {
+            currentSituation = sitNum;
+            const situation = situations[sitNum];
+            const content = document.getElementById('game-content');
+            
+            let optionsHtml = '';
+            for (let optNum in situation.options) {
+                const [label, _] = situation.options[optNum];
+                optionsHtml += `
+                    <button class="option-btn" onclick="evaluateChoice(${sitNum}, ${optNum})">
+                        ${optNum}. ${label}
+                    </button>
+                `;
+            }
+
+            content.innerHTML = `
+                <div class="situation-card">
+                    <div class="situation-text">${situation.text}</div>
+                    <img src="${situation.image}" alt="Situation ${sitNum}" class="game-image" onclick="openModal('${situation.image}')">
+                    <div class="threshold-info">
+                        🎯 <strong>Threshold Required:</strong> ${situation.threshold} points to continue
+                    </div>
+                </div>
+                <div class="options-container">
+                    ${optionsHtml}
+                </div>
+            `;
+            
+            updateScoreBoard();
+        }
+
+        function evaluateChoice(sitNum, optNum) {
+            const situation = situations[sitNum];
+            const [label, img] = situation.options[optNum];
+            const points = optionScores[optNum];
+            
+            totalScore += points;
+            totalChoices += 1;
+
+            const content = document.getElementById('game-content');
+            let resultHtml = `
+                <div class="situation-card">
+                    <div class="situation-text">${situation.text}</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-text">✅ You chose: <strong>${label}</strong></div>
+                    <img src="${img}" alt="Choice Result" class="game-image" onclick="openModal('${img}')">
+                    <div class="points-display">🧮 Points: ${points > 0 ? '+' : ''}${points.toFixed(1)}</div>
+                    <div class="points-display">📊 Total Score: ${totalScore.toFixed(1)}</div>
+            `;
+
+            if (totalScore >= situation.threshold) {
+                if (sitNum < 3) {
+                    resultHtml += `
+                        <button class="continue-btn" onclick="displaySituation(${sitNum + 1})">
+                            ➡️ Continue to Situation ${sitNum + 1}
+                        </button>
+                    `;
+                } else {
+                    resultHtml += `
+                        <button class="continue-btn" onclick="showFinalResult()">
+                            🎉 See Final Results
+                        </button>
+                    `;
+                }
+            } else {
+                resultHtml += `
+                    <div class="warning">
+                        ⚠️ Not enough points to continue. You need ${situation.threshold} points total. Choose another option to improve your score.
+                    </div>
+                `;
+                
+                // Show options again
+                resultHtml += `</div><div class="options-container">`;
+                for (let optNum in situation.options) {
+                    const [label, _] = situation.options[optNum];
+                    resultHtml += `
+                        <button class="option-btn" onclick="evaluateChoice(${sitNum}, ${optNum})">
+                            ${optNum}. ${label}
+                        </button>
+                    `;
+                }
+                resultHtml += `</div>`;
+            }
+
+            if (totalScore >= situation.threshold || sitNum === 3) {
+                resultHtml += `</div>`;
+            }
+
+            content.innerHTML = resultHtml;
+            updateScoreBoard();
+        }
+
+        function showFinalResult() {
+            const content = document.getElementById('game-content');
+            const grade = totalChoices <= 3 ? 'amazing' : 'good';
+            const gradeText = totalChoices <= 3 ? '🏅 Amazing!' : '👍 Keep it up!';
+            
+            content.innerHTML = `
+                <div class="final-result">
+                    <img src="conclusion.png" alt="Game Conclusion" class="game-image" onclick="openModal('conclusion.png')">
+                    <h2>Game Complete!</h2>
+                    <div class="final-score">${totalScore.toFixed(1)}</div>
+                    <p><strong>Total Choices Made:</strong> ${totalChoices}</p>
+                    <div class="grade ${grade}">${gradeText}</div>
+                    <p style="margin-top: 20px; color: #666; line-height: 1.6;">
+                        ${totalChoices <= 3 ? 
+                            'Excellent work! You handled the crisis efficiently with minimal decisions.' : 
+                            'Good job navigating the crisis! Consider how fewer, more strategic choices might improve efficiency.'}
+                    </p>
+                    <button class="start-btn" onclick="restartGame()" style="margin-top: 30px;">
+                        🔄 Play Again
+                    </button>
+                </div>
+            `;
+            updateScoreBoard();
+        }
+
+        function restartGame() {
+            currentSituation = 1;
+            totalScore = 0.0;
+            totalChoices = 0;
+            showIntro();
+        }
+
+        // Initialize the game
+        showIntro();
+    </script>
+</body>
+</html>
